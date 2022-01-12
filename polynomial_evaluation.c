@@ -8,7 +8,7 @@ double power(double x, int q) {
     }
 
     double m = x;
-    for (int i = 1; i < q; i++) { //1, 2, 3...q-1
+    for (int i = 1; i < q; i++) {
             m*=x;
         //HERE
         //this line should do some operation to achieve multiplications
@@ -20,7 +20,7 @@ double power(double x, int q) {
 
 int main() {
     //prompt user to type in x and y
-    printf("½Ð¿é¤J¯BÂI¼Æxªº­È¥H¤Î¦h¶µ¦¡§t¦³ªº¶µ¼Æ¥¿¾ã¼Æy¡J");
+    printf("è«‹è¼¸å…¥æµ®é»žæ•¸xçš„å€¼ä»¥åŠå¤šé …å¼å«æœ‰çš„é …æ•¸æ­£æ•´æ•¸yï¸°");
 
     //variable declaration
     double x;
@@ -37,7 +37,7 @@ int main() {
     int q[6];
 
     //iterate each line
-    for (int i = 0; i < y; i++) { //0, 1, 2..y-1
+    for (int i = 0; i < y; i++) {
         //fetch input
         scanf("%lf%d", &p[i], &q[i]);
 
@@ -47,7 +47,7 @@ int main() {
         //the left variable and right expression should be UNTOUCHED
         //only the OPERATION to be MODIFIED
         //please refer to page 6 of Operation slides to get some idea
-        result = p[i] * power(x, q[i]);
+        result += p[i] * power(x, q[i]);
     }
 
     printf("%lf\n", result);
